@@ -1,10 +1,28 @@
 Modelagem de domínios Ricos
 ===========================
-Não é receita pronta
-Fundamentos da modelagem baseada em building blocks
-Toda necessidade merece uma abordagem precisa e desenvolvida sob medida
+Objetivos do curso
+--DDD
+--SOLID
+--.NET
+--C#
+--CQRS
+--Soft Design Paterns
+--OOP
 ===========================
-Domain Driven Design - DDD
+Não iremos aprender nenhuma receita pronta!
+Fundamentos da modelagem baseada em building blocks.
+Toda necessidade merece uma abordagem precisa e desenvolvida sob medida.
+===========================
+Visão Geral do DDD
+--------------------------
+- Como faço para persistir uma entidade com Entity framwork no DDD?
+
+- Como faço para popular um DropDownList seguindo o padrão DDD?
+
+- Estou criando um back-end em WebAPI + DDD
+
+- Onde coloco uma camada de cache num projeto DDD?
+--------------------------
 - DDD não é arquitetura em camadas
 	--DDD não é uma receita pronta sobre como desenvolver uma arquitetura baseada em camadas do tipo:
 		---Presentation
@@ -12,18 +30,14 @@ Domain Driven Design - DDD
 		---Application
 		---Domain
 		---Infra
-		
+-------------------------
+Domain Driven Design - DDD		
 	--O DDD é uma abordagem de modelagem de software com foco na complexidade da aplicação.
 	--Através do conhecimento do domínio é possível facilitar a implementação de complexas regras / processos de negócio.
 	--Domain-Driven-Design é sobre design.
 	--Design guiado pelo conhecimento do domínio. "Toda arquitetura é design, mas nem todo design é arquitetura"
-- Como faço para persistir uma entidade com Entity framwork no DDD?
-
-- Como faço para popular um dropDownList seguindo o padrão DDD?
-
-- Estou criando um back-end em WebAPI + DDD
-
-- Onde coloco uma camada de cache num projeto DDD?
+	"Toda arquitetura é design, mas nem todo design é arquitetura" - Grady Booch
+--------------------------
 ============================
 Quando devo implementar o DDD?
 - Você precisa ter conhecimento suficiente por conta própria se deve implementar DDD ou não.
