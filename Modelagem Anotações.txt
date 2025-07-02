@@ -38,9 +38,37 @@ Domain Driven Design - DDD
 	--Design guiado pelo conhecimento do domínio. "Toda arquitetura é design, mas nem todo design é arquitetura"
 	"Toda arquitetura é design, mas nem todo design é arquitetura" - Grady Booch
 --------------------------
-============================
 Quando devo implementar o DDD?
 - Você precisa ter conhecimento suficiente por conta própria se deve implementar DDD ou não.
 - Caso não esteja conseguindo identificar.Não implemente.
+https://www.eduardopires.net.br/2016/08/ddd-nao-e-arquitetura-em-camadas/
+Big Ball of Mud
+--Impossível Gerenciar
+---Grande bola de lama, indica um anti-padrão para arquitetos e desenvolvedores e refere-se a um software que possui todos os "problemas" que resultam em um código difícil de entender, manter e estender
+----------------------------
+Como o DDD poderia resolver?
+--Capturar elementos conhecidos do negócio
+--Organizá-los em um conjunto de princípios
+--Criar uma modelagem de domínio com foco no desenvolvimento
+--Abordagem diferenciada para desenvolver a regra de negócio
+----------------------------
+Visão Global do DDD
+Eric Evans - ler o livro Domain Driven Design
+introduzido em 2003
+Pontos Chave do DDD:
+--Linguagem Ubiqua - Ubiquitous Language
+--Contexto delimitado - Bounded Context
+--Mapa de Contexto - Context Map
+
+O que é o DDD no sentido de aplicação
+--Entender o processos
+--Extrair a linguagem Ubiqua(pior erro deixar de extrair a linguagem Ubiqua(Domain Experts =><= Ubiquitous Language =><= Dev Team))
+--Modelagem estratégica:
+	---Capturar os grandes elementos e distribuir eles em dominios auxiliares, principais e genéricos
+--Mapa de Contexto
+--Definir a Arquitetura dos contextos
+--Modelagem Tática
+============================
+
 
 
