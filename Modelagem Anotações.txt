@@ -69,6 +69,15 @@ O que é o DDD no sentido de aplicação
 --Definir a Arquitetura dos contextos
 --Modelagem Tática
 ============================
+Linguagem Ubiqua - Ubiquitous Language
+--Vocabulário de todos os termos específicos do domínio
+	---Nomes, verbos, adjetivos, jargões, apelidos, expressões, idiomáticas e advérbios
+--Compartilhado por todas as partes envolvidas no projeto
+	---Primeiro passo para evitar desentimentos
+--Usadas em todas as formas faladas e escritas de uma comunicação
+	---A linguagem universal de um negócio é feita dentro da empresa
+Primeiro passo para garantir a modelagem é ter os termos e garantir que esses termos significam a mesma coisa
+
 
 
 
