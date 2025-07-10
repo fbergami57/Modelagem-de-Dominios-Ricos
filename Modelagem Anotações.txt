@@ -78,6 +78,54 @@ Linguagem Ubiqua - Ubiquitous Language
 	---A linguagem universal de um negócio é feita dentro da empresa
 Primeiro passo para garantir a modelagem é ter os termos e garantir que esses termos significam a mesma coisa
 
+Como gerenciar a linguagem ubiqua
+--Como gerenciar?
+	---Listar termos uytilizados salvos em documentos
+	---Time de desenvolvimento responsável não o Domain Expert
+	---Atualização constante
+	
+Dicas essênciais
+--Security
+--Cache
+--Database
+--Logging
+	public class SinistroRepository(Repository é um termo técnico)
+	{
+		
+	}
 
+	---Domain Experts
+	---Ubiquitous Language
+	---Dev Team
+--Contratar ou Escalar um Domain Expert(essencial)
+--Lidar com siglas
+	---Muito especifico
+	---Dificeis de lembrar
+	---Evitar se possivel
+--Idioma dos termos
+	---Não usar idioma diferente da empresa
+	Ex: 
+	public class SinistroRepository
+	{
+		public void GetSinistroById(int id){}
+		public void ObterSinistroPorId(int id){} = correto
+		
+		public void GerarRelatorioFrancesinha() {}
+		
+		public void GerarRelatorioSinteticoAnalitico() {}
+	}
+--Sincronizar com código fonte
+
+--Onde é indispensável o uso da UL?
+--Muitas definições difíceis de entender
+	---Garantir que todos os termos estão muito claros
+	---Nenhum outro termo é usado para indicar comportamento semelhante
+--A lógica de negócio não está 100% definida
+	---O negócio é novo e está crescendo (ex: Startups)
+	---O domínio será descoberto conforme o tempo
+--Ubiquitous Language
+	---A linguagem ubíqua pode mudar, mas não indefinidamente
+============================
+Modelagem Estratégica
 
 
