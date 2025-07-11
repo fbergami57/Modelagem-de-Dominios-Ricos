@@ -127,5 +127,7 @@ Dicas essênciais
 	---A linguagem ubíqua pode mudar, mas não indefinidamente
 ============================
 Modelagem Estratégica
+--Context Map
+	---
 
 
