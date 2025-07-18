@@ -128,6 +128,26 @@ Dicas essênciais
 ============================
 Modelagem Estratégica
 --Context Map
-	---
+	---Destacar informações importantes
+	---Finalidade do contexto
+	---Relacionamento que um contexto tem com o outro
+	---Não existe padrão, existe forma similares de aplicar(Mapa de contexto)
+--Bounded Context
+	---Destacar os contextos para fique bem delimitado
+	---Mapeamento para que cada contexto tenha sua linguagem ubiqua
+	---Dominio dividido em uma teia de contextos interconectados via integrações
+	"Se o contexto é complexo, vc ataca ele com complexidade, se o contexto é simples, vc ataca ele com simplicidade(CRUD SIMPLES)"
+	---Ubiqua => Subdominio => =>Suporte => Core (isso é feito através de subdominios) 
+	---Motivação
+		----Remover ambiguidade
+		----Simplificar o design dos módulos
+		----Integração dos componentes externos
+	---Domínios e Contextos
+		----todos os contextos formam um dominio de negócio
+			-----Se comunicam um com o outro(integração)
+			-----Alguns contextos dependem um do outro, sem se importar com sua importancia
+	
+	
+
 
 
