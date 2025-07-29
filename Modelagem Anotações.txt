@@ -78,6 +78,50 @@ Linguagem Ubiqua - Ubiquitous Language
 	---A linguagem universal de um negócio é feita dentro da empresa
 Primeiro passo para garantir a modelagem é ter os termos e garantir que esses termos significam a mesma coisa
 
+--Motivação
+	---Pessoas usam linguagens diferentes
+		----Terminologias em comum
+			-----Ajudando os requisitos do usuário fazerem mais sentido
+
+Papeis Dentro de um Projeto
+Domain Experts
+	--Conhece do Negócio o processo e seus termos
+	--Define novos termos, processos e regras
+	--Tem conhecimento da operação
+Time de Desenvolvimento
+	--Precisa do apoio do Domain Expert para entender o processo, e as terminologias do negócio
+
+Como Extrair e Definir a linguagem ubiqua
+	--Linguagem natural, não artificial
+	--Obtida em reuniões e brainstormings
+	--Composta e refinada com o tempo
+	--Fluente e única
+		---Atende ao entendimento do Domain Expert
+		---Atende ao entendimento da Equipe Técnica
+	Ubiqua = Usada em qualquer lugar
+		--User Stories e Requisitos Funcionais
+		--Reuniões
+		--E-mails
+		--Documentação técnica e do cliente
+		--O Cliente conhece e usam
+		--Os departamentos relcionados usam
+		--O CÓDIGO FONTE usa(Principalmente)
+	Use o modelo como o pilar da linguagem
+		--Descobrir a linguagem ubiqua
+		--Compreender o domínio do negócio
+		--Desenvolver o modelo
+	Sem sinônimos ou ambiguidades
+		--Exemplo: Excluir a reserva => Cancelar Reserva
+				   Validar boleto pago => Validar Compensação
+				   Quitar parcialmente => Amortizar
+				   Numero de pacientes => Número de Vidas
+				   Taxa de empréstismo => TAC(Taxa da Abertura de Crédito)
+
+Como Gerenciar a Linguagem Ubiqua
+	Como gerenciar?
+		--Lista de termos utilizados salvos em documentos
+			---
+============================
 
 
 
