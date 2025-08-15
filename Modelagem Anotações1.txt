@@ -1,0 +1,249 @@
+CRONOGRAMA
+Para finalizar até 31 de agosto de 2025 (considerando que hoje é 14 de agosto de 2025), você tem 18 dias, incluindo o dia de hoje, para concluir os estudos.
+Isso significa que você precisa estudar um pouco mais de uma hora por dia (aproximadamente 1h 6min) para cumprir o prazo. 
+Abaixo, criei uma sugestão de cronograma de estudos diários, levando em conta o conteúdo programático do curso.
+Cronograma de Estudos Diários
+1. Módulo de Introdução e Linguagem Ubíqua (Dias 1-3)
+ * Dia 1 (14/08): Comece com a apresentação e os papéis no projeto. Dedique tempo para entender a fundo o conceito de Linguagem Ubíqua e como gerenciá-la. - Done
+ (Aproximadamente 40 minutos de vídeo).
+ * Dia 2 (15/08): Avance para o Context Map, Bounded Context e a diferença entre Modelo de Negócio vs. Modelo de Domínio. (Aproximadamente 1 hora de vídeo). - In Progress
+ * Dia 3 (16/08): Conclua esta seção focando na Integridade do Modelo e nos tipos de relacionamento entre contextos. (Aproximadamente 30 minutos de vídeo).
+2. Módulo de Estilos Arquiteturais e Padrões (Dias 4-6)
+ * Dia 4 (17/08): Assista à evolução dos estilos arquiteturais e mergulhe nos padrões de projeto: Transaction Script, Table Module e Domain Model. (Aproximadamente 20 minutos de vídeo).
+ * Dia 5 (18/08): Concentre-se nos conceitos de Domain Module, Objetos de Valor, Entidades e Agregações. (Aproximadamente 50 minutos de vídeo).
+ * Dia 6 (19/08): Finalize o módulo estudando Serviços de Domínio, Repositórios e Eventos de Domínio. (Aproximadamente 20 minutos de vídeo).
+3. Módulo Mão na Massa - Implementação (Dias 7-12)
+ * Dia 7 (20/08): Comece a parte prática. Assista e siga o passo a passo para escrever a primeira entidade e fazer as validações. (Aproximadamente 50 minutos de vídeo).
+ * Dia 8 (21/08): Continue a implementação, focando em agregar com objetos de valor e testar comportamentos. (Aproximadamente 20 minutos de vídeo).
+ * Dia 9 (22/08): Dedique-se a aprender como utilizar serviços de domínio e como lançar eventos de domínio. (Aproximadamente 30 minutos de vídeo).
+ * Dia 10 (23/08): Estude as opções de camada de application e, em seguida, implemente-a na prática. (Aproximadamente 35 minutos de vídeo).
+ * Dia 11 (24/08): Comece a introdução ao Teorema CAP e o conceito de Command Stack e Query Stack. (Aproximadamente 30 minutos de vídeo).
+ * Dia 12 (25/08): Entenda a utilização de Sagas e aprofunde-se no conteúdo. (Aproximadamente 20 minutos de vídeo).
+4. Módulo CQRS e Event Sourcing (Dias 13-17)
+ * Dia 13 (26/08): Inicie o estudo de CQRS na prática. Foque na parte inicial de Setup do BC de Vendas e a criação de Objetos de Domínio. (Aproximadamente 45 minutos de vídeo).
+ * Dia 14 (27/08): Mergulhe em Command e Command Handler, e na manipulação de comandos na prática. (Aproximadamente 1 hora de vídeo).
+ * Dia 15 (28/08): Dedique-se ao tratamento de notificações e entenda a fundo a diferença entre Event e Event Handler. (Aproximadamente 1h 15min de vídeo).
+ * Dia 16 (29/08): Aprenda a implementar Queries (Query Stack) e a adicionar novas funcionalidades com comandos. (Aproximadamente 1h 10min de vídeo).
+ * Dia 17 (30/08): Estude a integração de BC's (Processamento do pedido, Pagamento e Finalização do pedido) e finalize com a visão geral da implementação. 
+ (Aproximadamente 1h 30min de vídeo).
+5. Revisão e Finalização (Dia 18)
+ * Dia 18 (31/08): Utilize este dia para revisar os principais conceitos e focar nos tópicos finais do curso, como a implementação de Sagas, Service Bus e Filas MSMQ, 
+ e o Event Sourcing (Setup, Persistindo eventos, Finalizando a implementação). (Aproximadamente 1h 45min de vídeo).
+Lembre-se de que este é apenas um guia. Sinta-se à vontade para ajustar o cronograma de acordo com seu ritmo e sua disponibilidade. O importante é manter a constância 
+e não deixar o estudo acumular.
+
+===========================
+Modelagem de domínios Ricos
+===========================
+Objetivos do curso
+--DDD
+--SOLID
+--.NET
+--C#
+--CQRS
+--Soft Design Paterns
+--OOP
+===========================
+Não iremos aprender nenhuma receita pronta!
+Fundamentos da modelagem baseada em building blocks.
+Toda necessidade merece uma abordagem precisa e desenvolvida sob medida.
+===========================
+Visão Geral do DDD
+--------------------------
+- Como faço para persistir uma entidade com Entity framwork no DDD?
+
+- Como faço para popular um DropDownList seguindo o padrão DDD?
+
+- Estou criando um back-end em WebAPI + DDD
+
+- Onde coloco uma camada de cache num projeto DDD?
+--------------------------
+- DDD não é arquitetura em camadas
+	--DDD não é uma receita pronta sobre como desenvolver uma arquitetura baseada em camadas do tipo:
+		---Presentation
+		---Services
+		---Application
+		---Domain
+		---Infra
+-------------------------
+Domain Driven Design - DDD		
+	--O DDD é uma abordagem de modelagem de software com foco na complexidade da aplicação.
+	--Através do conhecimento do domínio é possível facilitar a implementação de complexas regras / processos de negócio.
+	--Domain-Driven-Design é sobre design.
+	--Design guiado pelo conhecimento do domínio. "Toda arquitetura é design, mas nem todo design é arquitetura"
+	"Toda arquitetura é design, mas nem todo design é arquitetura" - Grady Booch
+--------------------------
+Quando devo implementar o DDD?
+- Você precisa ter conhecimento suficiente por conta própria se deve implementar DDD ou não.
+- Caso não esteja conseguindo identificar.Não implemente.
+https://www.eduardopires.net.br/2016/08/ddd-nao-e-arquitetura-em-camadas/
+Big Ball of Mud
+--Impossível Gerenciar
+---Grande bola de lama, indica um anti-padrão para arquitetos e desenvolvedores e refere-se a um software que possui todos os "problemas" que resultam em um código difícil de entender, manter e estender
+----------------------------
+Como o DDD poderia resolver?
+--Capturar elementos conhecidos do negócio
+--Organizá-los em um conjunto de princípios
+--Criar uma modelagem de domínio com foco no desenvolvimento
+--Abordagem diferenciada para desenvolver a regra de negócio
+----------------------------
+Visão Global do DDD
+Eric Evans - ler o livro Domain Driven Design
+introduzido em 2003
+Pontos Chave do DDD:
+--Linguagem Ubiqua - Ubiquitous Language
+--Contexto delimitado - Bounded Context
+--Mapa de Contexto - Context Map
+
+O que é o DDD no sentido de aplicação
+--Entender o processos
+--Extrair a linguagem Ubiqua(pior erro deixar de extrair a linguagem Ubiqua(Domain Experts =><= Ubiquitous Language =><= Dev Team))
+--Modelagem estratégica:
+	---Capturar os grandes elementos e distribuir eles em dominios auxiliares, principais e genéricos
+--Mapa de Contexto
+--Definir a Arquitetura dos contextos
+--Modelagem Tática
+============================
+Linguagem Ubiqua - Ubiquitous Language
+--Vocabulário de todos os termos específicos do domínio
+	---Nomes, verbos, adjetivos, jargões, apelidos, expressões, idiomáticas e advérbios
+--Compartilhado por todas as partes envolvidas no projeto
+	---Primeiro passo para evitar desentimentos
+--Usadas em todas as formas faladas e escritas de uma comunicação
+	---A linguagem universal de um negócio é feita dentro da empresa
+Primeiro passo para garantir a modelagem é ter os termos e garantir que esses termos significam a mesma coisa
+
+<<<<<<< HEAD:Modelagem Anotações.txt
+Como gerenciar a linguagem ubiqua
+--Como gerenciar?
+	---Listar termos uytilizados salvos em documentos
+	---Time de desenvolvimento responsável não o Domain Expert
+	---Atualização constante
+	
+Dicas essênciais
+--Security
+--Cache
+--Database
+--Logging
+	public class SinistroRepository(Repository é um termo técnico)
+	{
+		
+	}
+
+	---Domain Experts
+	---Ubiquitous Language
+	---Dev Team
+--Contratar ou Escalar um Domain Expert(essencial)
+--Lidar com siglas
+	---Muito especifico
+	---Dificeis de lembrar
+	---Evitar se possivel
+--Idioma dos termos
+	---Não usar idioma diferente da empresa
+	Ex: 
+	public class SinistroRepository
+	{
+		public void GetSinistroById(int id){}
+		public void ObterSinistroPorId(int id){} = correto
+		
+		public void GerarRelatorioFrancesinha() {}
+		
+		public void GerarRelatorioSinteticoAnalitico() {}
+	}
+--Sincronizar com código fonte
+
+--Onde é indispensável o uso da UL?
+--Muitas definições difíceis de entender
+	---Garantir que todos os termos estão muito claros
+	---Nenhum outro termo é usado para indicar comportamento semelhante
+--A lógica de negócio não está 100% definida
+	---O negócio é novo e está crescendo (ex: Startups)
+	---O domínio será descoberto conforme o tempo
+--Ubiquitous Language
+	---A linguagem ubíqua pode mudar, mas não indefinidamente
+=======
+--Motivação
+	---Pessoas usam linguagens diferentes
+		----Terminologias em comum
+			-----Ajudando os requisitos do usuário fazerem mais sentido
+
+Papeis Dentro de um Projeto
+Domain Experts
+	--Conhece do Negócio o processo e seus termos
+	--Define novos termos, processos e regras
+	--Tem conhecimento da operação
+Time de Desenvolvimento
+	--Precisa do apoio do Domain Expert para entender o processo, e as terminologias do negócio
+
+Como Extrair e Definir a linguagem ubiqua
+	--Linguagem natural, não artificial
+	--Obtida em reuniões e brainstormings
+	--Composta e refinada com o tempo
+	--Fluente e única
+		---Atende ao entendimento do Domain Expert
+		---Atende ao entendimento da Equipe Técnica
+	Ubiqua = Usada em qualquer lugar
+		--User Stories e Requisitos Funcionais
+		--Reuniões
+		--E-mails
+		--Documentação técnica e do cliente
+		--O Cliente conhece e usam
+		--Os departamentos relcionados usam
+		--O CÓDIGO FONTE usa(Principalmente)
+	Use o modelo como o pilar da linguagem
+		--Descobrir a linguagem ubiqua
+		--Compreender o domínio do negócio
+		--Desenvolver o modelo
+	Sem sinônimos ou ambiguidades
+		--Exemplo: Excluir a reserva => Cancelar Reserva
+				   Validar boleto pago => Validar Compensação
+				   Quitar parcialmente => Amortizar
+				   Numero de pacientes => Número de Vidas
+				   Taxa de empréstismo => TAC(Taxa da Abertura de Crédito)
+
+Como Gerenciar a Linguagem Ubiqua
+	Como gerenciar?
+		--Lista de termos utilizados salvos em documentos
+			---Glossário de termos completamente explicados
+			---Disponível para todos(rede, nuvem, intranet)
+			---Parte da documentação do projeto
+		--Como criar uma documentação de exemplo
+			---slimwiki
+
+Dicas essenciais 
+	Quanto técnica deve ser a linguagem?
+	--Contratar ou escalar especialistas
+	--Lidar com siglas(tudo muito especifico)
+		---Evitar o termo desde que ele não seja padrão
+	--O idioma dos termos(trabalhar no seu idioma)
+	
+>>>>>>> e6d9c28e21476bd8019b07e72473124bf86411f4:Modelagem Anotações1.txt
+============================
+Modelagem Estratégica
+--Context Map
+	---Destacar informações importantes
+	---Finalidade do contexto
+	---Relacionamento que um contexto tem com o outro
+	---Não existe padrão, existe forma similares de aplicar(Mapa de contexto)
+--Bounded Context
+	---Destacar os contextos para fique bem delimitado
+	---Mapeamento para que cada contexto tenha sua linguagem ubiqua
+	---Dominio dividido em uma teia de contextos interconectados via integrações
+	"Se o contexto é complexo, vc ataca ele com complexidade, se o contexto é simples, vc ataca ele com simplicidade(CRUD SIMPLES)"
+	---Ubiqua => Subdominio => =>Suporte => Core (isso é feito através de subdominios) 
+	---Motivação
+		----Remover ambiguidade
+		----Simplificar o design dos módulos
+		----Integração dos componentes externos
+	---Domínios e Contextos
+		----todos os contextos formam um dominio de negócio
+			-----Se comunicam um com o outro(integração)
+			-----Alguns contextos dependem um do outro, sem se importar com sua importancia
+<<<<<<< HEAD:Modelagem Anotações.txt
+	
+	
+
+=======
+>>>>>>> e6d9c28e21476bd8019b07e72473124bf86411f4:Modelagem Anotações1.txt
+
+
