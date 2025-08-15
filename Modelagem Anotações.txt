@@ -1,3 +1,38 @@
+CRONOGRAMA
+Para finalizar até 31 de agosto de 2025 (considerando que hoje é 14 de agosto de 2025), você tem 18 dias, incluindo o dia de hoje, para concluir os estudos.
+Isso significa que você precisa estudar um pouco mais de uma hora por dia (aproximadamente 1h 6min) para cumprir o prazo. 
+Abaixo, criei uma sugestão de cronograma de estudos diários, levando em conta o conteúdo programático do curso.
+Cronograma de Estudos Diários
+1. Módulo de Introdução e Linguagem Ubíqua (Dias 1-3)
+ * Dia 1 (14/08): Comece com a apresentação e os papéis no projeto. Dedique tempo para entender a fundo o conceito de Linguagem Ubíqua e como gerenciá-la. - Done
+ (Aproximadamente 40 minutos de vídeo).
+ * Dia 2 (15/08): Avance para o Context Map, Bounded Context e a diferença entre Modelo de Negócio vs. Modelo de Domínio. (Aproximadamente 1 hora de vídeo). - In Progress
+ * Dia 3 (16/08): Conclua esta seção focando na Integridade do Modelo e nos tipos de relacionamento entre contextos. (Aproximadamente 30 minutos de vídeo).
+2. Módulo de Estilos Arquiteturais e Padrões (Dias 4-6)
+ * Dia 4 (17/08): Assista à evolução dos estilos arquiteturais e mergulhe nos padrões de projeto: Transaction Script, Table Module e Domain Model. (Aproximadamente 20 minutos de vídeo).
+ * Dia 5 (18/08): Concentre-se nos conceitos de Domain Module, Objetos de Valor, Entidades e Agregações. (Aproximadamente 50 minutos de vídeo).
+ * Dia 6 (19/08): Finalize o módulo estudando Serviços de Domínio, Repositórios e Eventos de Domínio. (Aproximadamente 20 minutos de vídeo).
+3. Módulo Mão na Massa - Implementação (Dias 7-12)
+ * Dia 7 (20/08): Comece a parte prática. Assista e siga o passo a passo para escrever a primeira entidade e fazer as validações. (Aproximadamente 50 minutos de vídeo).
+ * Dia 8 (21/08): Continue a implementação, focando em agregar com objetos de valor e testar comportamentos. (Aproximadamente 20 minutos de vídeo).
+ * Dia 9 (22/08): Dedique-se a aprender como utilizar serviços de domínio e como lançar eventos de domínio. (Aproximadamente 30 minutos de vídeo).
+ * Dia 10 (23/08): Estude as opções de camada de application e, em seguida, implemente-a na prática. (Aproximadamente 35 minutos de vídeo).
+ * Dia 11 (24/08): Comece a introdução ao Teorema CAP e o conceito de Command Stack e Query Stack. (Aproximadamente 30 minutos de vídeo).
+ * Dia 12 (25/08): Entenda a utilização de Sagas e aprofunde-se no conteúdo. (Aproximadamente 20 minutos de vídeo).
+4. Módulo CQRS e Event Sourcing (Dias 13-17)
+ * Dia 13 (26/08): Inicie o estudo de CQRS na prática. Foque na parte inicial de Setup do BC de Vendas e a criação de Objetos de Domínio. (Aproximadamente 45 minutos de vídeo).
+ * Dia 14 (27/08): Mergulhe em Command e Command Handler, e na manipulação de comandos na prática. (Aproximadamente 1 hora de vídeo).
+ * Dia 15 (28/08): Dedique-se ao tratamento de notificações e entenda a fundo a diferença entre Event e Event Handler. (Aproximadamente 1h 15min de vídeo).
+ * Dia 16 (29/08): Aprenda a implementar Queries (Query Stack) e a adicionar novas funcionalidades com comandos. (Aproximadamente 1h 10min de vídeo).
+ * Dia 17 (30/08): Estude a integração de BC's (Processamento do pedido, Pagamento e Finalização do pedido) e finalize com a visão geral da implementação. 
+ (Aproximadamente 1h 30min de vídeo).
+5. Revisão e Finalização (Dia 18)
+ * Dia 18 (31/08): Utilize este dia para revisar os principais conceitos e focar nos tópicos finais do curso, como a implementação de Sagas, Service Bus e Filas MSMQ, 
+ e o Event Sourcing (Setup, Persistindo eventos, Finalizando a implementação). (Aproximadamente 1h 45min de vídeo).
+Lembre-se de que este é apenas um guia. Sinta-se à vontade para ajustar o cronograma de acordo com seu ritmo e sua disponibilidade. O importante é manter a constância 
+e não deixar o estudo acumular.
+
+===========================
 Modelagem de domínios Ricos
 ===========================
 Objetivos do curso
