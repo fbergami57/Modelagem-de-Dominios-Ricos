@@ -104,6 +104,11 @@ O que é o DDD no sentido de aplicação
 --Definir a Arquitetura dos contextos
 --Modelagem Tática
 ============================
+Today I gonna start a series of posts to share with you what I've been learning with the content of the course 
+"Modelagem de Domínios Ricos", where you learn how the basic concepts of how to structure you project and how the 
+definitions are so important in this process, but remember it's a first part of a learning process here it is the content.
+============================
+
 Linguagem Ubiqua - Ubiquitous Language
 --Vocabulário de todos os termos específicos do domínio
 	---Nomes, verbos, adjetivos, jargões, apelidos, expressões, idiomáticas e advérbios
@@ -113,7 +118,6 @@ Linguagem Ubiqua - Ubiquitous Language
 	---A linguagem universal de um negócio é feita dentro da empresa
 Primeiro passo para garantir a modelagem é ter os termos e garantir que esses termos significam a mesma coisa
 
-<<<<<<< HEAD:Modelagem Anotações.txt
 Como gerenciar a linguagem ubiqua
 --Como gerenciar?
 	---Listar termos uytilizados salvos em documentos
@@ -125,6 +129,7 @@ Dicas essênciais
 --Cache
 --Database
 --Logging
+	Exemplo:
 	public class SinistroRepository(Repository é um termo técnico)
 	{
 		
@@ -216,8 +221,6 @@ Dicas essenciais
 	--Lidar com siglas(tudo muito especifico)
 		---Evitar o termo desde que ele não seja padrão
 	--O idioma dos termos(trabalhar no seu idioma)
-	
->>>>>>> e6d9c28e21476bd8019b07e72473124bf86411f4:Modelagem Anotações1.txt
 ============================
 Modelagem Estratégica
 --Context Map
@@ -225,25 +228,91 @@ Modelagem Estratégica
 	---Finalidade do contexto
 	---Relacionamento que um contexto tem com o outro
 	---Não existe padrão, existe forma similares de aplicar(Mapa de contexto)
---Bounded Context
-	---Destacar os contextos para fique bem delimitado
+--Bounded Context (Contexto delimitado)
+	---Destacar os contextos para fique bem delimitado utilizando a linguagem ubiqua
 	---Mapeamento para que cada contexto tenha sua linguagem ubiqua
 	---Dominio dividido em uma teia de contextos interconectados via integrações
 	"Se o contexto é complexo, vc ataca ele com complexidade, se o contexto é simples, vc ataca ele com simplicidade(CRUD SIMPLES)"
 	---Ubiqua => Subdominio => =>Suporte => Core (isso é feito através de subdominios) 
 	---Motivação
-		----Remover ambiguidade
-		----Simplificar o design dos módulos
-		----Integração dos componentes externos
+		----Remover ambiguidade e duplicação de código
+		----Simplificar o design dos módulos, ao invés de ter um sistema monolitico 100% como se fosse focado em um único contexto, mais contextos com design mais simples e ataca um unico contexto.
+		----Integração dos componentes externos que diz respeito a uma parte especifica de um contexto.
 	---Domínios e Contextos
 		----todos os contextos formam um dominio de negócio
-			-----Se comunicam um com o outro(integração)
+			-----Podemos ter diversos contextos
+			-----Podem ou não se comunicar uns com os outros(integração) ou ser independentes
 			-----Alguns contextos dependem um do outro, sem se importar com sua importancia
-<<<<<<< HEAD:Modelagem Anotações.txt
+	---Mapa de aprendizado
+		----Grande bola de lama(segregar para melhor tratar)
+		----Camada de anti-corrupção
+		----Times que podem trabalhar em caminhos separados
+		----Contexto que atenda multiplos clientes(Hub) e um Swagger
+	---Definindo Contextos delimitados
+		----Começa com conceito de bounded context
+			-----Linguagem Ubiqua
+			-----Arquitetura independentes
+			-----Interfaces de serviços
+		----Exemplo:
+			-----Uma loja exibirá um catalogo de produtos de diversas categorias
+			-----Um cliente pode realizar um pedido contendo 1 ou N produtos.
+			-----A loja realizará as vendas através de pagamento por cartão de crédito
+			-----O cliente irá realizar o seu cadastro para poder fazer pedidos
+			-----O cliente irá confirmar o pedido, endereço de entrega, escolher o tipo de frete e realizar o pagamento
+			-----Após pagamento o pedido mudará de status conforme resposta da transação via cartão
+			-----Ocorrerá a emissão da nota fiscal logo após a confirmação do pagamento do pedido
+		----Identificando os elementos através da linguagem ubiqua:
+			-----Catálogo
+			-----Produtos
+			-----Categorias
+			-----Cliente
+			-----Pedido
+			-----Vendas
+			-----Pagamento
+			-----Cartão de Crédito
+			-----Cadastro
+			-----Endereço
+			-----Frete
+			-----Status
+			-----Transação
+			-----Nota Fiscal
+		----Identificando possíveis ações:
+			-----Uma loja **exibirá um catalogo de produtos de diversas categorias**
+			-----Um cliente pode **realizar um pedido** contendo 1 ou N produtos.
+			-----A loja **realizará as vendas** através de **pagamento por cartão de crédito**
+			-----O cliente irá **realizar o seu cadastro** para poder fazer pedidos
+			-----O cliente irá **confirmar o pedido**, endereço de entrega, **escolher o tipo de frete** e **realizar o pagamento**
+			-----Após pagamento o **pedido mudará de status** conforme **resposta da transação via cartão**
+			-----Ocorrerá a **emissão da nota fiscal** logo após a **confirmação do pagamento** do pedido
+		----Definindo contextos e elementos chave:
+			-----Cadastro(Ciente, endereço)
+			-----Catálogo(Produto, Categoria)
+			-----Vendas(Cliente, Endereço, Produto, Pedido, Status, Frete, Pagamento, Transação)
+			-----Pagamento(Cliente, Pedido, Pagamento, Transação)
+			-----Fiscal(NF-e, Pedido, Cliente)
+		----Dominio Principal **Core**
+			-----Catálogo
+			-----Vendas
+		----Dominio Auxiliar
+			-----Cadastro
+			-----Fiscal
+		----Dominio Genérico
+			-----Pagamento(somente integrar a solução)
+	---Modelo de Negócio x Modelo de Dominio
+		----Diferença entre Modelo de Negócio e Modelo de Dominio:
+			-----Domain Model
+				------Marketing Context
+				------Procedure Context(subdomains)
+				------Inventory(subdomains)
+				------Pricing Context
+				------Fulfilment Context
+				------Sales Context
+			
+
 	
 	
 
 =======
->>>>>>> e6d9c28e21476bd8019b07e72473124bf86411f4:Modelagem Anotações1.txt
+
 
 
