@@ -167,20 +167,27 @@ Modelagem Estratégica
 	---Finalidade do contexto
 	---Relacionamento que um contexto tem com o outro
 	---Não existe padrão, existe forma similares de aplicar(Mapa de contexto)
---Bounded Context
-	---Destacar os contextos para fique bem delimitado
+--Bounded Context (Contexto delimitado)
+	---Destacar os contextos para fique bem delimitado utilizando a linguagem ubiqua
 	---Mapeamento para que cada contexto tenha sua linguagem ubiqua
 	---Dominio dividido em uma teia de contextos interconectados via integrações
 	"Se o contexto é complexo, vc ataca ele com complexidade, se o contexto é simples, vc ataca ele com simplicidade(CRUD SIMPLES)"
 	---Ubiqua => Subdominio => =>Suporte => Core (isso é feito através de subdominios) 
 	---Motivação
-		----Remover ambiguidade
-		----Simplificar o design dos módulos
-		----Integração dos componentes externos
+		----Remover ambiguidade e duplicação de código
+		----Simplificar o design dos módulos, ao invés de ter um sistema monolitico 100% como se fosse focado em um único contexto, mais contextos com design mais simples e ataca um unico contexto.
+		----Integração dos componentes externos que diz respeito a uma parte especifica de um contexto.
 	---Domínios e Contextos
 		----todos os contextos formam um dominio de negócio
-			-----Se comunicam um com o outro(integração)
+			-----Podemos ter diversos contextos
+			-----Podem ou não se comunicar uns com os outros(integração) ou ser independentes
 			-----Alguns contextos dependem um do outro, sem se importar com sua importancia
+	---Mapa de aprendizado
+		----Grande bola de lama(segregar para melhor tratar)
+		----Camada de anti-corrupção
+		----Times que podem trabalhar em caminhos separados
+		----Contexto que atenda multiplos clientes(Hub) e um Swagger
+		----
 	
 	
 
