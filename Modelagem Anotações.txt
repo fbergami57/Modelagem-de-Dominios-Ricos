@@ -308,6 +308,56 @@ Modelagem Estratégica
 				------Pricing Context
 				------Fulfilment Context
 				------Sales Context
+			----Exemplo:
+			----Database
+				-----Product
+					------Promotion Subdomain
+					------Allocation Subdomain
+					------Loyalty Subdomain
+					------Shipping Subdomain
+				-----Big Ball of Mud
+					------Inventory Model
+						-------Public Class Product
+								{
+									public Locations Stock(){...}
+								}
+					------Fullfillment Model
+						-------Public Class Product
+								{
+									public void Allocate(){...}
+								}
+					------Pricing Model
+						-------Public Class Product
+								{
+									public Price PriceFor(CustomerType...)
+								}
+					------Shipping Model
+						-------Public Class Product
+								{
+									public bool CanShipTo(Country...)
+								}
+					------Procurement Model
+						-------Public Class Product
+								{
+									public PurchaseOrder BuyFrom(Supplier...)
+								}
+					------Personalization Model
+						-------Public Class Product
+								{
+									public Recomendations Similar(){...}
+								}
+				----Class:
+					-----Public Class Product
+						{
+							public void Allocate(){...}
+							public Locations Stock(){...}
+							public Recomendations Similar(){...}
+							public Price PriceFor(CustomerType...)
+							public PurchaseOrder BuyFrom(Supplier...)
+							public bool CanShipTo(Country...)
+						}
+		----Diferença entre Modelo de Negócio e Modelo de Dominio(Olhando para o Domínio):
+			
 			
 
 =======
