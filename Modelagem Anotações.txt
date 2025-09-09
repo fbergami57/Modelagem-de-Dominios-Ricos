@@ -248,7 +248,7 @@ Modelagem Estratégica
 		----Camada de anti-corrupção
 		----Times que podem trabalhar em caminhos separados
 		----Contexto que atenda multiplos clientes(Hub) e um Swagger
-<<<<<<< HEAD
+
 	---Definindo Contextos delimitados
 		----Começa com conceito de bounded context
 			-----Linguagem Ubiqua
@@ -308,44 +308,28 @@ Modelagem Estratégica
 				------Pricing Context
 				------Fulfilment Context
 				------Sales Context
-			----Exemplo:
+				
+			----Exemplo: E-commerce Application
 			----Database
 				-----Product
 					------Promotion Subdomain
 					------Allocation Subdomain
 					------Loyalty Subdomain
 					------Shipping Subdomain
-				-----Big Ball of Mud
+				-----Big Ball of Mud (Models)
 					------Inventory Model
 						-------Public Class Product
-								{
-									public Locations Stock(){...}
-								}
 					------Fullfillment Model
 						-------Public Class Product
-								{
-									public void Allocate(){...}
-								}
 					------Pricing Model
 						-------Public Class Product
-								{
-									public Price PriceFor(CustomerType...)
-								}
-					------Shipping Model
+					-----Shipping Model
 						-------Public Class Product
-								{
-									public bool CanShipTo(Country...)
-								}
 					------Procurement Model
 						-------Public Class Product
-								{
-									public PurchaseOrder BuyFrom(Supplier...)
-								}
 					------Personalization Model
 						-------Public Class Product
-								{
-									public Recomendations Similar(){...}
-								}
+
 				----Class:
 					-----Public Class Product
 						{
@@ -357,12 +341,18 @@ Modelagem Estratégica
 							public bool CanShipTo(Country...)
 						}
 		----Diferença entre Modelo de Negócio e Modelo de Dominio(Olhando para o Domínio):
-			
+			-----Domains concepts in Context
+				------Sales Context(Product(Price))
+				------Pricing Context(Product(Car value,car price by type of legal entity or individual))
+				------Procurement Context(Product)
+				------Marketing Context(Product(Car model))
+				------Inventory Context(Product)
+				
 			
 
 =======
 		----
->>>>>>> 7b56d51ce0dda731d29e3d60430bd414e1ee9bb7
+
 	
 	
 
