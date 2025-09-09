@@ -248,7 +248,6 @@ Modelagem Estratégica
 		----Camada de anti-corrupção
 		----Times que podem trabalhar em caminhos separados
 		----Contexto que atenda multiplos clientes(Hub) e um Swagger
-<<<<<<< HEAD
 	---Definindo Contextos delimitados
 		----Começa com conceito de bounded context
 			-----Linguagem Ubiqua
@@ -309,6 +308,7 @@ Modelagem Estratégica
 				------Fulfilment Context
 				------Sales Context
 			----Exemplo:
+			----E-Commerce Application
 			----Database
 				-----Product
 					------Promotion Subdomain
@@ -362,7 +362,7 @@ Modelagem Estratégica
 
 =======
 		----
->>>>>>> 7b56d51ce0dda731d29e3d60430bd414e1ee9bb7
+
 	
 	
 
