@@ -311,13 +311,11 @@ Modelagem Estratégica
 				------Pricing Context
 				------Fulfilment Context
 				------Sales Context
-<<<<<<< HEAD
 				
 			----Exemplo: E-commerce Application
 =======
 			----Exemplo:
 			----E-Commerce Application
->>>>>>> origin/main
 			----Database
 				-----Product
 					------Promotion Subdomain
