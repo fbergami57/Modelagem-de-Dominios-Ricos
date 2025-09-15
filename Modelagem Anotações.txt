@@ -248,10 +248,6 @@ Modelagem Estratégica
 		----Camada de anti-corrupção
 		----Times que podem trabalhar em caminhos separados
 		----Contexto que atenda multiplos clientes(Hub) e um Swagger
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 	---Definindo Contextos delimitados
 		----Começa com conceito de bounded context
 			-----Linguagem Ubiqua
@@ -311,9 +307,6 @@ Modelagem Estratégica
 				------Pricing Context
 				------Fulfilment Context
 				------Sales Context
-				
-			----Exemplo: E-commerce Application
-=======
 			----Exemplo:
 			----E-Commerce Application
 			----Database
@@ -322,20 +315,37 @@ Modelagem Estratégica
 					------Allocation Subdomain
 					------Loyalty Subdomain
 					------Shipping Subdomain
-				-----Big Ball of Mud (Models)
+				-----Big Ball of Mud
 					------Inventory Model
 						-------Public Class Product
+								{
+									public Locations Stock(){...}
+								}
 					------Fullfillment Model
 						-------Public Class Product
+								{
+									public void Allocate(){...}
+								}
 					------Pricing Model
 						-------Public Class Product
-					-----Shipping Model
+								{
+									public Price PriceFor(CustomerType...)
+								}
+					------Shipping Model
 						-------Public Class Product
+								{
+									public bool CanShipTo(Country...)
+								}
 					------Procurement Model
 						-------Public Class Product
+								{
+									public PurchaseOrder BuyFrom(Supplier...)
+								}
 					------Personalization Model
 						-------Public Class Product
-
+								{
+									public Recomendations Similar(){...}
+								}
 				----Class:
 					-----Public Class Product
 						{
@@ -347,12 +357,24 @@ Modelagem Estratégica
 							public bool CanShipTo(Country...)
 						}
 		----Diferença entre Modelo de Negócio e Modelo de Dominio(Olhando para o Domínio):
-			-----Domains concepts in Context
-				------Sales Context(Product(Price))
-				------Pricing Context(Product(Car value,car price by type of legal entity or individual))
-				------Procurement Context(Product)
-				------Marketing Context(Product(Car model))
-				------Inventory Context(Product)
+			-----Domain Concepts in Context
+				------Domain Model
+					-------Procurement Context(Product)
+					-------Inventory(Product)
+					-------Sales Context(Product(a good price to sell))
+					-------Pricing Context(Product(Região e tipo cliente PJ ou CPF))
+				------Marketing Context(Product(how to sell the product))
+				------Fulfilment Context(Product)
+			-----Prodct Table(One table for each context)
+				------ID
+				------Nome
+				------Categoria
+				------Valor
+				------Valor Taxi
+			-----Para não realizar a consulta em cada tabela, utilizamos o conceito de CQRS
+				------Database Reading(NoSQL/MongoDB)
+					-------Full product(only reading)
+						
 				
 			
 
