@@ -381,7 +381,27 @@ Modelagem Estratégica
 					-------XXX
 					-------XXX1
 	---Integridade do Modelo em risco
-		----
+		----time de desenvolvimento trabalhando em um contexto
+		----time de desenvolvimento trabalhando em outro time
+			-----Mesma entidade sendo compartilhada entre dois contextos(modelo de negocio sendo dividido entre dois times)
+			-----Risco de adicionar muitas responsabilidades nesses contextos compartilhados
+		----Como prever esse tipo de situação?
+			-----O mesmo termo tem significados diferentes para times diferentes(Contextos diferentes)
+			-----O mesmo termo representa elementos diferentes(o Contexto faz o significado mudar)
+			-----Dependencias com sistemas externos(não pode ser usada a entidade para tudo)
+			-----Dependencia de código legado
+			-----Areas funcionais da aplicação são melhor tratadas separadamente
+		----Visão de contextos delimitados
+			-----A aplicação é resultado de uma composição de multiplos contextos
+				------Exemplo:
+					-------Loja virtual, Vendas, Fiscal, Logistica, etc...
+			-----O numero de contextos delimitados refletem a organização fisica da empresa(nem sempre uma coisa boa)
+				------Um contexto delimitado para cada departamento da Empresa
+	---Tipos de Relacionamentos
+		----Direção do Relacionamento
+			-----Contextos "Upstream" influenciam contextos "Downstream"(Essas influencias afetam: binários, mudanças, cronograma)
+			
+			
 						
 				
 			
