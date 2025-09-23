@@ -357,7 +357,25 @@ Modelagem Estratégica
 							public bool CanShipTo(Country...)
 						}
 		----Diferença entre Modelo de Negócio e Modelo de Dominio(Olhando para o Domínio):
-			
+			-----Domain Concepts in Context
+				------Domain Model
+					-------Procurement Context(Product)
+					-------Inventory(Product)
+					-------Sales Context(Product(a good price to sell))
+					-------Pricing Context(Product(Região e tipo cliente PJ ou CPF))
+				------Marketing Context(Product(how to sell the product))
+				------Fulfilment Context(Product)
+			-----Prodct Table(One table for each context)
+				------ID
+				------Nome
+				------Categoria
+				------Valor
+				------Valor Taxi
+			-----Para não realizar a consulta em cada tabela, utilizamos o conceito de CQRS
+				------Database Reading(NoSQL/MongoDB)
+					-------Full product(only reading)
+						
+				
 			
 
 =======
