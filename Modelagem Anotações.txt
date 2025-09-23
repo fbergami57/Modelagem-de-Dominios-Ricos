@@ -399,7 +399,12 @@ Modelagem Estratégica
 				------Um contexto delimitado para cada departamento da Empresa
 	---Tipos de Relacionamentos
 		----Direção do Relacionamento
+			-----Contextos se relacionam mas com tipos de relacionamento diferente dependendo do contexto
 			-----Contextos "Upstream" influenciam contextos "Downstream"(Essas influencias afetam: binários, mudanças, cronograma)
+			-----Tipo de relacionamento e direção do relacionamento(Upstream(U) e Downstream(D))
+				------Nucleo Compartilhado
+					-------Cliente(Dominio Auxilia)
+				
 			
 			
 						
