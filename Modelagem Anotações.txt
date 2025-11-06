@@ -365,12 +365,23 @@ Modelagem Estratégica
 					-------Pricing Context(Product(Região e tipo cliente PJ ou CPF))
 				------Marketing Context(Product(how to sell the product))
 				------Fulfilment Context(Product)
+<<<<<<< HEAD
+			-----Prodct Table(One table for each context)
+=======
 			-----Prodct Table(One table for each context but the ID MUST unique to get a relational between databases)
+>>>>>>> aa66f0bd71c64a0a1da5e9185253717db82e42ea
 				------ID
 				------Nome
 				------Categoria
 				------Valor
 				------Valor Taxi
+<<<<<<< HEAD
+			-----Para não realizar a consulta em cada tabela, utilizamos o conceito de CQRS
+				------Database Reading(NoSQL/MongoDB)
+					-------Full product(only reading)
+						
+				
+=======
 			-----Para não realizar a consulta em cada tabela de contexto, utilizamos o conceito de CQRS
 				------Database Reading(NoSQL/MongoDB)
 					-------Full product(only reading)
@@ -443,6 +454,7 @@ Modelagem Estratégica
 					 
 				
 			
+>>>>>>> aa66f0bd71c64a0a1da5e9185253717db82e42ea
 			
 						
 				
