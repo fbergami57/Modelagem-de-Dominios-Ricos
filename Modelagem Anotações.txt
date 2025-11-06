@@ -248,49 +248,49 @@ Modelagem Estratégica
 		----Camada de anti-corrupção
 		----Times que podem trabalhar em caminhos separados
 		----Contexto que atenda multiplos clientes(Hub) e um Swagger
-	---Definindo Contextos delimitados
-		----Começa com conceito de bounded context
-			-----Linguagem Ubiqua
-			-----Arquitetura independentes
-			-----Interfaces de serviços
-		----Exemplo:
-			-----Uma loja exibirá um catalogo de produtos de diversas categorias
-			-----Um cliente pode realizar um pedido contendo 1 ou N produtos.
-			-----A loja realizará as vendas através de pagamento por cartão de crédito
-			-----O cliente irá realizar o seu cadastro para poder fazer pedidos
-			-----O cliente irá confirmar o pedido, endereço de entrega, escolher o tipo de frete e realizar o pagamento
-			-----Após pagamento o pedido mudará de status conforme resposta da transação via cartão
-			-----Ocorrerá a emissão da nota fiscal logo após a confirmação do pagamento do pedido
-		----Identificando os elementos através da linguagem ubiqua:
-			-----Catálogo
-			-----Produtos
-			-----Categorias
-			-----Cliente
-			-----Pedido
-			-----Vendas
-			-----Pagamento
-			-----Cartão de Crédito
-			-----Cadastro
-			-----Endereço
-			-----Frete
-			-----Status
-			-----Transação
-			-----Nota Fiscal
-		----Identificando possíveis ações:
-			-----Uma loja **exibirá um catalogo de produtos de diversas categorias**
-			-----Um cliente pode **realizar um pedido** contendo 1 ou N produtos.
-			-----A loja **realizará as vendas** através de **pagamento por cartão de crédito**
-			-----O cliente irá **realizar o seu cadastro** para poder fazer pedidos
-			-----O cliente irá **confirmar o pedido**, endereço de entrega, **escolher o tipo de frete** e **realizar o pagamento**
-			-----Após pagamento o **pedido mudará de status** conforme **resposta da transação via cartão**
-			-----Ocorrerá a **emissão da nota fiscal** logo após a **confirmação do pagamento** do pedido
-		----Definindo contextos e elementos chave:
-			-----Cadastro(Ciente, endereço)
-			-----Catálogo(Produto, Categoria)
-			-----Vendas(Cliente, Endereço, Produto, Pedido, Status, Frete, Pagamento, Transação)
-			-----Pagamento(Cliente, Pedido, Pagamento, Transação)
-			-----Fiscal(NF-e, Pedido, Cliente)
-		----Dominio Principal **Core**
+--Definindo Contextos delimitados
+	---Começa com conceito de bounded context
+		----Linguagem Ubiqua
+		----Arquitetura independentes
+		----Interfaces de serviços
+	---Exemplo:
+		----Uma loja exibirá um catalogo de produtos de diversas categorias
+		----Um cliente pode realizar um pedido contendo 1 ou N produtos.
+		----A loja realizará as vendas através de pagamento por cartão de crédito
+		----O cliente irá realizar o seu cadastro para poder fazer pedidos
+		----O cliente irá confirmar o pedido, endereço de entrega, escolher o tipo de frete e realizar o pagamento
+		----Após pagamento o pedido mudará de status conforme resposta da transação via cartão
+		----Ocorrerá a emissão da nota fiscal logo após a confirmação do pagamento do pedido
+	---Identificando os elementos através da linguagem ubiqua:
+		----Catálogo
+		----Produtos
+		----Categorias
+		----Cliente
+		----Pedido
+		----Vendas
+		----Pagamento
+		----Cartão de Crédito
+		----Cadastro
+		----Endereço
+		----Frete
+		----Status
+		----Transação
+		----Nota Fiscal
+	---Identificando possíveis ações:
+		----Uma loja **exibirá um catalogo de produtos de diversas categorias**
+		----Um cliente pode **realizar um pedido** contendo 1 ou N produtos.
+		----A loja **realizará as vendas** através de **pagamento por cartão de crédito**
+		----O cliente irá **realizar o seu cadastro** para poder fazer pedidos
+		----O cliente irá **confirmar o pedido**, endereço de entrega, **escolher o tipo de frete** e **realizar o pagamento**
+		----Após pagamento o **pedido mudará de status** conforme **resposta da transação via cartão**
+		----Ocorrerá a **emissão da nota fiscal** logo após a **confirmação do pagamento** do pedido
+	---Definindo contextos e elementos chave:
+		----Cadastro(Ciente, endereço)
+		----Catálogo(Produto, Categoria)
+		----Vendas(Cliente, Endereço, Produto, Pedido, Status, Frete, Pagamento, Transação)
+		----Pagamento(Cliente, Pedido, Pagamento, Transação)
+		----Fiscal(NF-e, Pedido, Cliente)
+	---Dominio Principal **Core**
 			-----Catálogo
 			-----Vendas
 		----Dominio Auxiliar
@@ -397,13 +397,50 @@ Modelagem Estratégica
 					-------Loja virtual, Vendas, Fiscal, Logistica, etc...
 			-----O numero de contextos delimitados refletem a organização fisica da empresa(nem sempre uma coisa boa)
 				------Um contexto delimitado para cada departamento da Empresa
-	---Tipos de Relacionamentos
+	---Tipos de Relacionamentos entre Contextos(tabelas no banco de dados)
 		----Direção do Relacionamento
 			-----Contextos se relacionam mas com tipos de relacionamento diferente dependendo do contexto
-			-----Contextos "Upstream" influenciam contextos "Downstream"(Essas influencias afetam: binários, mudanças, cronograma)
+			-----Contextos "Upstream" influenciam contextos "Downstream"(Essas influencias afetam: binários, mudanças, cronograma, etc...)
 			-----Tipo de relacionamento e direção do relacionamento(Upstream(U) e Downstream(D))
-				------Nucleo Compartilhado
-					-------Cliente(Dominio Auxilia)
+				------Pagamento(Dominio Genérico)"Upstream"
+					-------Conformista
+				-----Entrada Vendas - Produto/Pedido(Dominio Principal)"Downstream" - Nucleo Compartilhado(Classes base e interfaces)
+				------Saída Vendas - Produto/Pedido(Dominio Principal)"Upstream" - Nucleo Compartilhado(Classes base e interfaces)
+					-------Cliente - Fornecedor
+				------Fiscal - Produto/Pedido(Dominio Auxiliar)"Downstream" - Nucleo Compartilhado(Classes base e interfaces)
+				------Cadastro - Cliente(Dominio Auxiliar)"Downstream" - Nucleo Compartilhado(Classes base e interfaces)
+					-------Parceiros
+				--------Catálogo - Produto(Dominio Principal) - Nucleo Compartilhado(Classes base e interfaces)
+			-----Nucleo Compartilhado relacionamento(mais identificado como contexto)
+				------Caracteristicas de um Nucleo Compartilhado
+					------Comum existir
+					------Forte acoplamento entre os contextos(ideal sempre evitar acoplamentos)
+					------Se houver alteração no nucleo pode quebrar os contextos
+					------Em algumas situações será necessário ter mais de um nucleo compartilhado
+		----Resumo dos tipos de Relacionamentos
+			-----Conformista - Contextos Downstream dependem de contextos Upstream e nenhuma negociação é permitida
+			-----Customer/Supplier - Contextos Customer dependem de Contextos Supplier e leva a oportunidade de levantar preocupações e abordar alguma solução
+			-----Partner - Dependencia mútua entre dois contextos(se um muda o outro tem que mudar também)
+			-----Shared Kernel - Um modelo compartilhado não pode ser alterado sem consultar os times que dependem dele
+			-----Anti-Corruption Layer - Camada adicional dando ao contexto Downstreal uma interface fixa independente do que acontece com contexto Upstream
+	----Definições resumidas
+		-----O que é o Context Map?
+			------É um mapa que representa todos os contextos mapeados atraves dos elementos da linguagem ubíqua. Neste mapa os contextos estão claramente visíveis assim como seus subordinados e relacionamentos
+		-----Direção dos relacionamentos:
+			------Contextos Upstream influenciam Contextos Downstream
+		-----Tipos de relacion entre Contextos:
+			------O relacionamento cliente-fornecedor (customer-supplier) coloca o contexto fornecedor em posição de maior prioridade em relação ao contexto cliente, 
+				  porém o exige que o contexto fornecedor tenha testes de integração para detectar uma quebra no contexto cliente em caso de mudanças.
+			------O relacionamento Conformista aponta que o contexto upstream não fornece nenhum tipo de cooperação em relação as mudanças, portanto uma camada de anti-corrupção 
+				  é indicada para transformar os dados e criar um único ponto de quebra.
+			------O relacionamento Parceiros "Partners" indica que os dois contextos estão comprometidos em mudar quando houver alguma mudança que cause impacto. Neste caso não existe 
+				  direção de relacionamento os dois possuem o mesmo peso em relação a influência.
+			
+
+					
+					
+				
+					 
 				
 			
 			
